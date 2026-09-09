@@ -9,6 +9,8 @@
 
 add_executable(factor
   main.cpp
+  cjson.cpp
+  cjson.h
 )
 
 target_link_libraries(factor PRIVATE factor_warnings blake2b seam)

@@ -121,6 +121,9 @@ if(Python3_FOUND)
   add_test(NAME hash_cross
            COMMAND ${Python3_EXECUTABLE} "${CMAKE_SOURCE_DIR}/tests/hash_cross.py"
                    "$<TARGET_FILE:factor>")
+  add_test(NAME cjson_cross
+           COMMAND ${Python3_EXECUTABLE} "${CMAKE_SOURCE_DIR}/tests/cjson_cross.py"
+                   "$<TARGET_FILE:factor>")
 else()
   message(WARNING "FACTOR: no Python3 interpreter found; the falsifiers are not registered")
 endif()

@@ -23,6 +23,7 @@
 // Nothing is dropped silently and nothing returns a stale value.
 
 #include "blake2b.h"
+#include "cjson.h"
 #include "../seam/seam.h"
 
 #include <windows.h>
@@ -156,10 +157,19 @@ int verb_selftest() {
                     (bad == 0) ? "PASS" : "FAIL", bad);
     }
 
+    // 3 -- canonical JSON, the writer and the strict reader.
+    {
+        const int bad = cjson::cjson_selftest();
+        checks++;
+        if (bad != 0) {
+            failures++;
+        }
+    }
+
     std::printf("  ---\n");
     std::printf("  %d of %d checks passed\n", checks - failures, checks);
-    std::printf("  not yet compiled in: canonical JSON, the frame codec, the\n");
-    std::printf("  128-byte record, the chain. They arrive in build order.\n");
+    std::printf("  not yet compiled in: the frame codec, the 128-byte record,\n");
+    std::printf("  the chain. They arrive in build order.\n");
     return (failures == 0) ? kDone : kRefused;
 }
 
@@ -250,6 +260,49 @@ int verb_hash_batch() {
     return (lines > 0) ? kDone : kEmpty;
 }
 
+// `factor cjson --batch` -- the canonical JSON cross-check surface.
+//
+// One JSON document per line in; per line out either
+//
+//     OK <the canonical bytes>          the reader accepted it and the writer
+//                                       re-emitted exactly these bytes
+//     DRIFT <the canonical bytes>       accepted, but re-emitting changed it
+//     REFUSED <reason>                  the strict reader refused it
+//
+// A canonical document is always one line, because every C0 control inside a
+// string is escaped, so line-per-document costs nothing. tests/cjson_cross.py
+// drives it against Python's canon().
+int verb_cjson_batch() {
+    std::string line;
+    std::size_t lines = 0;
+
+    while (std::getline(std::cin, line)) {
+        while (!line.empty() && (line.back() == '\r' || line.back() == '\n')) {
+            line.pop_back();
+        }
+        if (line.empty()) {
+            continue;
+        }
+        lines++;
+
+        cjson::Value v;
+        std::string err;
+        if (!cjson::parse(line, &v, &err)) {
+            std::printf("REFUSED %s\n", err.c_str());
+            continue;
+        }
+        std::string again;
+        if (!cjson::write(v, &again, &err)) {
+            std::printf("REFUSED %s\n", err.c_str());
+            continue;
+        }
+        std::printf("%s %s\n", (again == line) ? "OK" : "DRIFT", again.c_str());
+    }
+
+    std::fflush(stdout);
+    return (lines > 0) ? kDone : kEmpty;
+}
+
 int refuse_unbuilt(const char *verb) {
     std::fprintf(stderr,
                  "factor: %s is not built at this point in M0's order.\n"
@@ -267,6 +320,7 @@ int usage(const char *argv0) {
         "  selftest                    the compiled-in checks\n"
         "  hash --batch                stdin: <outlen> <person_hex|-> "
         "<key_hex|-> <input_hex|->\n"
+        "  cjson --batch               stdin: one JSON document per line\n"
         "  boot --home <dir>           [not built]\n"
         "  verify --home <dir>         [not built]\n"
         "  spool-verify <spool>        [not built]\n"
@@ -298,6 +352,14 @@ int main(int argc, char **argv) {
             return verb_hash_batch();
         }
         std::fprintf(stderr, "factor hash: only --batch is built\n"
+                             "  reason: out-of-domain\n");
+        return kRefused;
+    }
+    if (std::strcmp(verb, "cjson") == 0) {
+        if (argc >= 3 && std::strcmp(argv[2], "--batch") == 0) {
+            return verb_cjson_batch();
+        }
+        std::fprintf(stderr, "factor cjson: only --batch is built\n"
                              "  reason: out-of-domain\n");
         return kRefused;
     }
