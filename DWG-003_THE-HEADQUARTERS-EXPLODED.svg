@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1500" viewBox="0 0 2000 1500" font-family="Segoe UI, Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b93a7"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6ee7b7"/>
+    </marker>
+    <marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a78bfa"/>
+    </marker>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#151922" stroke-width="1"/>
+    </pattern>
+    <style>
+      .box { fill:#141821; stroke:#3a4150; stroke-width:1.6; }
+      .spec { fill:#11141b; stroke:#4a5264; stroke-width:1.6; stroke-dasharray:7 6; }
+      .mind { fill:#171426; stroke:#7c6cf0; stroke-width:1.8; }
+      .green { fill:#0f1a18; stroke:#6ee7b7; stroke-width:1.8; }
+      .t { fill:#e8eaf0; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-weight:700; font-size:18px; letter-spacing:1px; }
+      .ts { fill:#e8eaf0; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-weight:700; font-size:15px; letter-spacing:1px; }
+      .d { fill:#9aa3b5; font-size:14px; }
+      .d13 { fill:#9aa3b5; font-size:13px; }
+      .m { fill:#8b93a7; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-size:13px; }
+      .m12 { fill:#8b93a7; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-size:12px; }
+      .p { fill:#a78bfa; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-size:13px; font-weight:700; }
+      .g { fill:#6ee7b7; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-size:13px; font-weight:700; }
+      .band { fill:#5f6778; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-size:12px; letter-spacing:2px; }
+      .law { fill:#c7cbd6; font-family:Consolas,'Cascadia Mono',Menlo,monospace; font-size:13px; }
+      .wire { fill:#12162a; stroke:#5b4fd6; stroke-width:1.4; stroke-dasharray:5 5; }
+      .arrow { fill:none; stroke:#8b93a7; stroke-width:1.5; marker-end:url(#arr); }
+      .arrowd { fill:none; stroke:#8b93a7; stroke-width:1.5; stroke-dasharray:5 5; marker-end:url(#arr); }
+      .arrowg { fill:none; stroke:#6ee7b7; stroke-width:2; marker-end:url(#arrg); }
+      .arrowp { fill:none; stroke:#a78bfa; stroke-width:1.6; stroke-dasharray:5 5; marker-end:url(#arrp); }
+    </style>
+  </defs>
+
+  <!-- plate -->
+  <rect width="2000" height="1500" fill="#0b0d12"/>
+  <rect width="2000" height="1500" fill="url(#grid)"/>
+  <rect x="50" y="50" width="1900" height="1400" rx="28" fill="#0f1117" stroke="#2a2f3a" stroke-width="2"/>
+  <rect x="90" y="110" width="1820" height="1300" fill="none" stroke="#242833" stroke-width="1.5"/>
+
+  <!-- band captions -->
+  <text x="110" y="128" class="band">PEOPLE — sign</text>
+  <text x="110" y="372" class="band">MINDS — propose</text>
+  <text x="110" y="838" class="band">BODY — disposes</text>
+
+  <!-- ===== PEOPLE band ===== -->
+  <rect x="110" y="140" width="320" height="110" rx="12" class="box"/>
+  <text x="270" y="170" text-anchor="middle" class="ts">THE ACCOUNT — every Friday</text>
+  <text x="270" y="194" text-anchor="middle" class="d">asks made of you  /  things handled</text>
+  <text x="270" y="214" text-anchor="middle" class="d">kappa per class · what it is not doing</text>
+  <text x="270" y="236" text-anchor="middle" class="m12">never adoption · never hours saved</text>
+
+  <rect x="470" y="140" width="310" height="110" rx="12" class="box"/>
+  <text x="625" y="170" text-anchor="middle" class="ts">THE WRIT</text>
+  <text x="625" y="194" text-anchor="middle" class="d">what it is for · what may never be done</text>
+  <text x="625" y="214" text-anchor="middle" class="d">envelopes · caps · licenses per class</text>
+  <text x="625" y="236" text-anchor="middle" class="m12">signed · sequenced · never fitted</text>
+
+  <rect x="800" y="140" width="250" height="110" rx="12" class="box"/>
+  <text x="925" y="170" text-anchor="middle" class="ts">SIGNATURES</text>
+  <text x="925" y="194" text-anchor="middle" class="d">every irreversible: money, contract,</text>
+  <text x="925" y="214" text-anchor="middle" class="d">consent, filing, a first payee</text>
+  <text x="925" y="236" text-anchor="middle" class="m12">a person's hand, or a jury and a cap</text>
+
+  <rect x="1070" y="140" width="220" height="110" rx="12" class="box"/>
+  <text x="1180" y="170" text-anchor="middle" class="ts">THE STRATUM</text>
+  <text x="1180" y="194" text-anchor="middle" class="d">a slice of every licensed class</text>
+  <text x="1180" y="214" text-anchor="middle" class="d">routed to a person, forever</text>
+  <text x="1180" y="236" text-anchor="middle" class="m12">never zero · the safety driver</text>
+
+  <!-- authority down -->
+  <path d="M 625 250 L 625 285" class="arrowd"/>
+  <text x="640" y="272" class="m12">authority flows down, as constraints</text>
+
+  <!-- HQ planner -->
+  <rect x="470" y="285" width="820" height="60" rx="12" class="spec"/>
+  <text x="490" y="311" class="ts">THE HQ PLANNER — the fleet manager</text>
+  <text x="490" y="333" class="d13">reads the wires' fields and probes, never raw streams · sets budgets and priorities as constraints · proposes no verb</text>
+  <path d="M 880 345 L 880 390" class="arrow"/>
+  <text x="895" y="372" class="m12">budgets · priorities</text>
+
+  <!-- ===== MINDS band ===== -->
+  <!-- FUSOR nodes -->
+  <rect x="110" y="390" width="320" height="240" rx="12" class="mind"/>
+  <text x="270" y="420" text-anchor="middle" class="t">FUSOR NODES</text>
+  <text x="270" y="442" text-anchor="middle" class="m12">one per seat · the edge</text>
+  <text x="270" y="470" text-anchor="middle" class="d">trunk · three seats · seam · tape</text>
+  <text x="270" y="492" text-anchor="middle" class="d">speaks at boundaries · un-says mid-word</text>
+  <text x="270" y="514" text-anchor="middle" class="d">the sensor at the human interface</text>
+  <text x="270" y="536" text-anchor="middle" class="d">the only effector toward people: the pad</text>
+  <text x="270" y="570" text-anchor="middle" class="p">fork 0 MiB · abort 13 µs · 0.97 / 0.02</text>
+  <text x="270" y="592" text-anchor="middle" class="p">14.8× molt · 63.4% → 6.7% flood, tuned</text>
+  <text x="270" y="616" text-anchor="middle" class="m12">built · measured · live hours on the ledger</text>
+
+  <!-- lanes -->
+  <rect x="110" y="655" width="320" height="95" rx="12" class="box"/>
+  <text x="270" y="682" text-anchor="middle" class="ts">LANES — the world, in</text>
+  <text x="270" y="706" text-anchor="middle" class="d13">change-data capture · mail · calendar · books</text>
+  <text x="270" y="726" text-anchor="middle" class="d13">documents · calls · every lane declares its lag</text>
+  <path d="M 270 655 L 270 632" class="arrow"/>
+  <text x="282" y="648" class="m12">frames</text>
+
+  <!-- account link -->
+  <path d="M 270 390 L 270 252" class="arrow"/>
+  <text x="282" y="300" class="m12">the account</text>
+  <text x="282" y="316" class="m12">the asks → the pad</text>
+
+  <!-- wire drivers -->
+  <rect x="470" y="390" width="820" height="240" rx="12" class="spec"/>
+  <text x="490" y="418" class="t">WIRE DRIVERS ×N — one resident trunk per wire · the continuous driver</text>
+  <rect x="490" y="436" width="185" height="56" rx="8" class="wire"/>
+  <text x="582" y="460" text-anchor="middle" class="ts">ORDER → CASH</text>
+  <text x="582" y="480" text-anchor="middle" class="m12">ship · invoice · paid</text>
+  <rect x="695" y="436" width="185" height="56" rx="8" class="wire"/>
+  <text x="787" y="460" text-anchor="middle" class="ts">PROCURE → PAY</text>
+  <text x="787" y="480" text-anchor="middle" class="m12">approve · receive · pay</text>
+  <rect x="900" y="436" width="185" height="56" rx="8" class="wire"/>
+  <text x="992" y="460" text-anchor="middle" class="ts">CLAIM → SETTLE</text>
+  <text x="992" y="480" text-anchor="middle" class="m12">adjudicate · pay or deny</text>
+  <rect x="1105" y="436" width="165" height="56" rx="8" class="wire"/>
+  <text x="1187" y="460" text-anchor="middle" class="ts">RECORD → REPORT</text>
+  <text x="1187" y="480" text-anchor="middle" class="m12">close · file · attest</text>
+  <text x="490" y="518" class="d">reads everything the wire sees · holds every open commitment already read · plans a trajectory per commitment</text>
+  <text x="490" y="538" class="d">re-plans on every touch · thinks on a fork when the margin is thin · proposes a verb, a margin, a plan — never disposes</text>
+  <text x="490" y="564" class="m">HEADS: hand · check · guard · trajectory</text>
+  <text x="490" y="582" class="m">PROBE: the field read off the trunk, the BEV map — where probe and record disagree is a residual</text>
+  <text x="490" y="608" class="p">44 ms / judgment on a free card · 27–35B planner beside the 9B judge · 52.7 MB per slot, measured</text>
+  <text x="1270" y="624" text-anchor="end" class="m12">specified · unbuilt at wire radius</text>
+  <text x="1284" y="396" text-anchor="end" class="m12">weights ←</text>
+
+  <!-- fusor <-> drivers -->
+  <path d="M 430 470 L 470 470" class="arrow"/>
+  <text x="450" y="462" text-anchor="middle" class="m12">frames</text>
+  <path d="M 470 540 L 430 540" class="arrow"/>
+  <text x="450" y="560" text-anchor="middle" class="m12">drafts</text>
+  <text x="450" y="574" text-anchor="middle" class="m12">asks</text>
+
+  <!-- floor / twin / jury -->
+  <rect x="470" y="655" width="240" height="95" rx="12" class="box"/>
+  <text x="590" y="680" text-anchor="middle" class="ts">THE FLOOR</text>
+  <text x="590" y="702" text-anchor="middle" class="d13">a deterministic judge over typed fields</text>
+  <text x="590" y="720" text-anchor="middle" class="d13">beside every driver forever · the null to beat</text>
+  <text x="590" y="740" text-anchor="middle" class="m12">a class the model cannot beat is compiled</text>
+
+  <rect x="780" y="655" width="230" height="95" rx="12" class="box"/>
+  <text x="895" y="680" text-anchor="middle" class="ts">THE TWIN</text>
+  <text x="895" y="702" text-anchor="middle" class="d13">same weights, turn-based</text>
+  <text x="895" y="720" text-anchor="middle" class="d13">paired judgment by judgment</text>
+  <text x="895" y="740" text-anchor="middle" class="m12">the race that decides presence</text>
+
+  <rect x="1030" y="655" width="260" height="95" rx="12" class="spec"/>
+  <text x="1160" y="680" text-anchor="middle" class="ts">THE JURY</text>
+  <text x="1160" y="702" text-anchor="middle" class="d13">families trained apart · one role each</text>
+  <text x="1160" y="720" text-anchor="middle" class="d13">bound to the effect bytes · a nonce · a TTL</text>
+  <text x="1160" y="740" text-anchor="middle" class="m12">the endpoint is never a required family</text>
+
+  <!-- ===== THE SEAM ===== -->
+  <path d="M 110 800 L 1290 800" stroke="#6ee7b7" stroke-width="2" stroke-dasharray="10 8" fill="none"/>
+  <text x="765" y="790" class="g">THE SEAM — proposals in · one verb out · nothing learned disposes</text>
+  <path d="M 745 630 L 745 850" class="arrowg"/>
+  <text x="758" y="826" class="g">commit — the only way across</text>
+
+  <!-- field -> probe (up) -->
+  <path d="M 400 850 L 400 815 L 448 815 L 448 610 L 470 610" class="arrowp"/>
+  <text x="440" y="720" transform="rotate(-90 440 720)" text-anchor="middle" class="m12">the field, as a probe</text>
+
+  <!-- ===== BODY band ===== -->
+  <!-- field -->
+  <rect x="110" y="850" width="320" height="140" rx="12" class="box"/>
+  <text x="270" y="877" text-anchor="middle" class="ts">THE FIELD · CUDA</text>
+  <text x="270" y="899" text-anchor="middle" class="d13">lattice: wire × class × slot · pressure · ripeness</text>
+  <text x="270" y="917" text-anchor="middle" class="d13">conservation · differential · integer · bit-exact</text>
+  <text x="270" y="935" text-anchor="middle" class="d13">a fold over the tape · the map the drivers read</text>
+  <text x="270" y="962" text-anchor="middle" class="p">50k cells · 5 ms readout · 2M vectors / 2 ms</text>
+  <text x="270" y="980" text-anchor="middle" class="m12">gate built · kernels unbuilt</text>
+
+  <!-- gate -->
+  <rect x="470" y="850" width="400" height="140" rx="12" class="box"/>
+  <text x="670" y="877" text-anchor="middle" class="ts">THE GATE — deterministic, the last word</text>
+  <text x="490" y="900" class="d13">0 standing   1 blocked   2 irreversible → sign</text>
+  <text x="490" y="918" class="d13">3 guard → ask   4 check → wait   5 degraded → draft</text>
+  <text x="490" y="936" class="d13">6 affirmative clearance · a tie band holds</text>
+  <text x="490" y="954" class="d13">7 license: rung × band   8 budget: holds, never acts</text>
+  <text x="490" y="972" class="d13">9 safe terminal at due · silence is never the record</text>
+
+  <!-- ladder -->
+  <rect x="890" y="850" width="400" height="140" rx="12" class="box"/>
+  <text x="1090" y="877" text-anchor="middle" class="ts">THE LADDER — the license fold</text>
+  <text x="1090" y="900" text-anchor="middle" class="d13">0 off · 1 shadow · 2 canary · 3 wiring · 4 class · 5 exception</text>
+  <text x="1090" y="918" text-anchor="middle" class="d13">up: an anytime-valid test, both sides of the threshold</text>
+  <text x="1090" y="936" text-anchor="middle" class="d13">down: a change detector, an order of magnitude easier</text>
+  <text x="1090" y="954" text-anchor="middle" class="d13">expiry · an audit floor that never reaches zero</text>
+  <text x="1090" y="975" text-anchor="middle" class="p">kappa ≥ 1 demotes · α_up 0.01 · α_dn 0.10 · n₀ per side</text>
+  <path d="M 890 920 L 872 920" class="arrow"/>
+
+  <!-- outcomes -->
+  <rect x="110" y="1010" width="320" height="110" rx="12" class="box"/>
+  <text x="270" y="1037" text-anchor="middle" class="ts">OUTCOMES → GRADES</text>
+  <text x="270" y="1059" text-anchor="middle" class="d13">exogenous witnesses only · per-verb horizons</text>
+  <text x="270" y="1077" text-anchor="middle" class="d13">the hand's own reflections are receipts, never grades</text>
+  <text x="270" y="1095" text-anchor="middle" class="d13">predicted trajectory vs actual path grades a hold</text>
+  <text x="270" y="1113" text-anchor="middle" class="m12">the only signal the machine cannot write</text>
+
+  <!-- folds -->
+  <rect x="470" y="1010" width="400" height="110" rx="12" class="box"/>
+  <text x="670" y="1037" text-anchor="middle" class="ts">THE FOLDS</text>
+  <text x="670" y="1059" text-anchor="middle" class="d13">state · grades · license · kappa · fronts · contradiction</text>
+  <text x="670" y="1077" text-anchor="middle" class="d13">wants · negative space · the account</text>
+  <text x="670" y="1095" text-anchor="middle" class="d13">each a deterministic reduction over the tape, stamped</text>
+  <text x="670" y="1113" text-anchor="middle" class="m12">cold recompute equals incremental, or it is a defect</text>
+  <path d="M 670 1010 L 670 992" class="arrow"/>
+  <text x="656" y="1004" text-anchor="end" class="m12">license · kappa, read live</text>
+
+  <!-- hand -->
+  <rect x="890" y="1010" width="400" height="110" rx="12" class="box"/>
+  <text x="1090" y="1037" text-anchor="middle" class="ts">THE HAND — one writer, the valve</text>
+  <text x="1090" y="1059" text-anchor="middle" class="d13">inverse · window · signature · disclosing · reflexive</text>
+  <text x="1090" y="1077" text-anchor="middle" class="d13">caps aggregate · a first payee asks · egress printed per row</text>
+  <text x="1090" y="1097" text-anchor="middle" class="p" font-size="12">os-enforced sandbox · CUDA inside 281.6 vs 279.4 t/s</text>
+  <text x="1090" y="1114" text-anchor="middle" class="m12">the process that acts cannot judge · typed effects only</text>
+  <path d="M 800 990 L 800 1000 L 1090 1000 L 1090 1010" class="arrow"/>
+
+  <!-- tape bar -->
+  <rect x="110" y="1145" width="1180" height="62" rx="12" class="green"/>
+  <text x="130" y="1172" class="t" fill="#e8eaf0">THE TAPE · TAPESTRY</text>
+  <text x="400" y="1172" class="d">committed · hash-chained · owned · every fold rebuildable from it · a hold is a row · a refusal is a row</text>
+  <text x="400" y="1194" class="p">128 B record · BLAKE2b-256 keyed · two witnesses of the head · tape of tapes: every organ's head lands as a row</text>
+  <path d="M 270 1120 L 270 1145" class="arrow"/>
+  <path d="M 1090 1120 L 1090 1145" class="arrow"/>
+  <path d="M 670 1145 L 670 1122" class="arrow"/>
+  <text x="1104" y="1138" class="m12">rows</text>
+  <text x="284" y="1138" class="m12">frames</text>
+  <text x="684" y="1138" class="m12">folds read the tape</text>
+
+  <!-- ===== RIGHT column ===== -->
+  <!-- title block -->
+  <rect x="1330" y="130" width="530" height="200" fill="#0e1016" stroke="#3a4150" stroke-width="1.5"/>
+  <line x1="1330" y1="180" x2="1860" y2="180" stroke="#3a4150"/>
+  <line x1="1330" y1="230" x2="1860" y2="230" stroke="#3a4150"/>
+  <line x1="1330" y1="280" x2="1860" y2="280" stroke="#3a4150"/>
+  <text x="1350" y="162" class="m" fill="#c7cbd6">FACTOR-HQ · DWG-003 · REV 1</text>
+  <text x="1350" y="212" class="m" fill="#c7cbd6">THE HEADQUARTERS, EXPLODED · SCALE: NONE</text>
+  <text x="1350" y="262" class="m" fill="#c7cbd6">REV 1 — DRIVER SEATED, DASHED · FTE LEDGER A SKETCH</text>
+  <text x="1350" y="312" class="m" fill="#c7cbd6">SCHEMATIC — NOT THE CODE · 2026-09-08</text>
+
+  <!-- tune -->
+  <rect x="1330" y="370" width="530" height="150" rx="12" class="spec"/>
+  <text x="1350" y="397" class="ts">THE TUNE — versioned weight events</text>
+  <text x="1350" y="421" class="d13">1  imitation from the shadow tape: what people did, how it turned out</text>
+  <text x="1350" y="439" class="d13">2  reward in the gym: forked futures, scored on the wire's own rewards</text>
+  <text x="1350" y="457" class="d13">3  a pinned weight event · deploy is a widening → a person ratifies</text>
+  <text x="1350" y="481" class="p">serve bytes · weights · maps · runtime · env pinned as one</text>
+  <text x="1350" y="503" class="m12">the loop learns where mistakes are free, never on the road</text>
+  <path d="M 1330 400 L 1292 400" class="arrowd"/>
+
+  <!-- counsel -->
+  <rect x="1330" y="545" width="530" height="90" rx="12" class="spec"/>
+  <text x="1350" y="572" class="ts">COUNSEL — rented, never resident</text>
+  <text x="1350" y="594" class="d13">a redacted brief to an endpoint · disclosing · counted in bytes and dollars</text>
+  <text x="1350" y="612" class="d13">never required for an irreversible · rent the turn, own the loop</text>
+  <path d="M 1330 590 L 1292 590" class="arrowd"/>
+
+  <!-- FTE compression -->
+  <rect x="1330" y="660" width="530" height="325" rx="12" class="box"/>
+  <text x="1350" y="688" class="ts">FTE COMPRESSION — the ledger of seats</text>
+  <text x="1350" y="710" class="m12">a sketch the audit replaces · 500-seat headquarters</text>
+  <line x1="1350" y1="722" x2="1840" y2="722" stroke="#3a4150"/>
+  <text x="1350" y="745" class="d13">coordination · 20% · the shared object, no model</text>
+  <text x="1840" y="745" text-anchor="end" class="p">−80%</text>
+  <text x="1350" y="767" class="d13">processing · 35% · graduation, class by class</text>
+  <text x="1840" y="767" text-anchor="end" class="p">−65%</text>
+  <text x="1350" y="789" class="d13">content · 15% · a drafting tier with spot review</text>
+  <text x="1840" y="789" text-anchor="end" class="p">−50%</text>
+  <text x="1350" y="811" class="d13">writ · signature · residual · room · 30% · stays</text>
+  <text x="1840" y="811" text-anchor="end" class="p">0–10%</text>
+  <line x1="1350" y1="824" x2="1840" y2="824" stroke="#3a4150"/>
+  <text x="1350" y="848" class="p">≈ 46–49% of seats · the first 80 need no model at all</text>
+  <text x="1350" y="872" class="d13">order: coordination first, then processing class by class, then content</text>
+  <text x="1350" y="894" class="d13">measured: adjudication minutes · kappa per class · commitments that waited</text>
+  <text x="1350" y="916" class="d13">the person is not the seat: people move to the residual and the stratum</text>
+  <text x="1350" y="944" class="m12">never adoption · never hours saved · pre-registered before the first number</text>
+  <text x="1350" y="966" class="m12">on record: 46–49% (runbook sketch) vs 10–20% (code read) — unmeasured</text>
+
+  <!-- world out -->
+  <rect x="1330" y="1010" width="530" height="110" rx="12" class="box"/>
+  <text x="1350" y="1037" class="ts">THE WORLD, OUT</text>
+  <text x="1350" y="1059" class="d13">systems of record · counterparties · devices · allowlisted hosts</text>
+  <text x="1350" y="1077" class="d13">every byte that leaves is printed with its host and its cost</text>
+  <text x="1350" y="1099" class="m12">the mind never writes here · only the hand · only through the gate</text>
+  <path d="M 1290 1065 L 1330 1065" class="arrow"/>
+
+  <!-- tape -> tune -->
+  <path d="M 1290 1176 L 1312 1176 L 1312 445 L 1330 445" class="arrowd"/>
+  <text x="1299" y="800" transform="rotate(-90 1299 800)" text-anchor="middle" class="m12">the graded tape → epoch</text>
+
+  <!-- ===== FOOTER ===== -->
+  <line x1="110" y1="1232" x2="1860" y2="1232" stroke="#242833"/>
+  <text x="110" y="1262" class="law">information flows UP, compressed — streams → field → probe → summary</text>
+  <text x="110" y="1286" class="law">authority flows DOWN, as constraints — writ → envelopes → budgets → licenses</text>
+  <text x="110" y="1310" class="law">acts leave only through the gate — the mind never writes to the world · the body never plans</text>
+  <text x="110" y="1334" class="law" fill="#e8eaf0">minds propose · the body disposes · people sign</text>
+  <text x="110" y="1372" class="m12">solid — built or measured · dashed — specified, unbuilt · purple — a measured number · green — the seam and the tape</text>
+  <text x="110" y="1392" class="m12">FUSOR node and wire driver are one kind of thing at two radii · the field, gate, hand and tape are the body · the writ is above both</text>
+
+  <rect x="1330" y="1245" width="530" height="160" rx="12" class="box"/>
+  <text x="1350" y="1272" class="ts">THE VOCABULARY — borrowed from the road</text>
+  <text x="1350" y="1296" class="d13">operational design domain = the class</text>
+  <text x="1600" y="1296" class="d13">shadow miles = shadow rows</text>
+  <text x="1350" y="1316" class="d13">disengagement rate = the ask rate</text>
+  <text x="1600" y="1316" class="d13">closed course = the canary</text>
+  <text x="1350" y="1336" class="d13">safety case = the license fold</text>
+  <text x="1600" y="1336" class="d13">safety driver = the stratum</text>
+  <text x="1350" y="1356" class="d13">drive log = the tape</text>
+  <text x="1600" y="1356" class="d13">trajectory = the plan per commitment</text>
+  <text x="1350" y="1384" class="m12">fifteen years of validated safety vocabulary, one substitution table</text>
+</svg>

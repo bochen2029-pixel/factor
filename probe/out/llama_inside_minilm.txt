@@ -1,0 +1,11 @@
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 16375 MiB):
+  Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes, VRAM: 16375 MiB
+load_backend: loaded CUDA backend from C:\llama.cpp\ggml-cuda.dll
+load_backend: loaded RPC backend from C:\llama.cpp\ggml-rpc.dll
+load_backend: loaded CPU backend from C:\llama.cpp\ggml-cpu-haswell.dll
+| model                          |       size |     params | backend    | ngl |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | --------------: | -------------------: |
+| bert 22M F16                   |  43.10 MiB |    22.57 M | CUDA       |  99 |           pp128 |  63114.72 ± 72078.62 |
+| bert 22M F16                   |  43.10 MiB |    22.57 M | CUDA       |  99 |            tg32 |     1715.14 ± 311.68 |
+
+build: 53bd47ea5 (9627)

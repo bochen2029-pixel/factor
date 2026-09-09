@@ -1,0 +1,6 @@
+PROBE-BEGIN tag=outside pid=9848
+TEST SOCKET FAIL loopback_127.0.0.1:9=refused(10061) internet_1.1.1.1:80=ok(0) loopback_live_127.0.0.1:61433=connected(0) egress_leaked=YES
+TEST AFD FAIL afd_endpoint_status=0x00000000 afd_raw_status=0x00000000 openable=YES
+TEST PIPE FAIL secure=OK(err=0) secure_echo="FACTOR-PROBE-PING" default=OPENED(err=0)
+TEST CUDA PASS load_nvcuda=OK cuInit=0(CUDA_SUCCESS) count=1 dev0="NVIDIA GeForce RTX 4070 Ti SUPER" cuCtxCreate=0 cuMemAlloc64MiB=0 HtoD=0 DtoH=0 roundtrip=MATCH
+PROBE-END

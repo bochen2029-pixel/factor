@@ -1,0 +1,43 @@
+# Build output
+build/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.lib
+*.exp
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor and OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Held back from the public repository on purpose, 2026-09-09.
+#
+# These are not build artifacts. They are documents that exist in the working
+# tree and are deliberately not published, because each carries material that
+# is not this repository's to distribute:
+#
+#   DRIVING_THE_ORGANIZATION*.md
+#       organization-radius material derived from a third-party PDF and from a
+#       named US organ procurement organization's clinical workflow, including
+#       donor-management detail. Not needed to read or build FACTOR.
+#
+#   qc/O4_chatter.md
+#       a review whose citations are line references into private session
+#       transcripts on the author's machine, plus a quotation from the
+#       operator's own correspondence.
+#
+# Everything they contributed to the design is already in BLUEPRINT_v0.2.md and
+# its six amendments, which are published in full.
+# ---------------------------------------------------------------------------
+DRIVING_THE_ORGANIZATION.md
+DRIVING_THE_ORGANIZATION_NOTES-FROM-55555.md
+qc/O4_chatter.md
